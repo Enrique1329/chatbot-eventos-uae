@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatBot Eventos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #4a6fa5, #6b8cbf);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    p {
+      max-width: 500px;
+      opacity: 0.9;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #4a6fa5;
+      --df-messenger-button-titlebar-color: #4a6fa5;
+      --df-messenger-chat-background-color: #f5f7fa;
+      --df-messenger-font-color: #333;
+      --df-messenger-send-icon: #4a6fa5;
+      --df-messenger-user-message: #6b8cbf;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ChatBot de Eventos Académicos</h1>
+  <p>Haz clic en el ícono de chat en la esquina inferior derecha para hablar con el asistente virtual.</p>
+
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="ChatBot_Eventos"
+    agent-id="e994580c-e3b3-471e-a686-e7fb1ab14d6c"
+    language-code="es"
+  ></df-messenger>
+
+</body>
+</html>
