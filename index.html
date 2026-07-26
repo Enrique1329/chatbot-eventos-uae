@@ -27,22 +27,23 @@
       max-width: 500px;
       opacity: 0.9;
     }
-
     df-messenger {
-      --df-messenger-bot-message: #4a6fa5;
-      --df-messenger-button-titlebar-color: #4a6fa5;
-      --df-messenger-chat-background-color: #f5f7fa;
-      --df-messenger-font-color: #333;
-      --df-messenger-send-icon: #4a6fa5;
-      --df-messenger-user-message: #6b8cbf;
+      --df-messenger-bot-message: #eef2f9;
+      --df-messenger-user-message: #2563eb;
+      --df-messenger-font-color: #1f2937;
+      --df-messenger-button-titlebar-color: #2563eb;
+      --df-messenger-chat-background-color: #f7f9fc;
+      --df-messenger-send-icon: #2563eb;
+      --df-messenger-input-box-color: #ffffff;
+      --df-messenger-input-font-color: #1f2937;
+      --df-messenger-input-placeholder-font-color: #9aa5b1;
+      --df-messenger-minimized-chat-close-icon-color: #2563eb;
     }
   </style>
 </head>
 <body>
-
   <h1>ChatBot de Eventos Académicos</h1>
   <p>Haz clic en el ícono de chat en la esquina inferior derecha para hablar con el asistente virtual.</p>
-
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <df-messenger
     intent="WELCOME"
@@ -50,6 +51,5 @@
     agent-id="e994580c-e3b3-471e-a686-e7fb1ab14d6c"
     language-code="es"
   ></df-messenger>
-
 </body>
 </html>
