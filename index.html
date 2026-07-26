@@ -61,9 +61,8 @@
 
       /* Mensajes del usuario */
       --df-messenger-user-message:#2563eb;
-      --df-messenger-user-message-font-color:#ffffff; /* Texto del usuario en Blanco */
 
-      /* Color de letra general (para respuestas del bot) */
+      /* Color de letra general */
       --df-messenger-font-color:#1f2937;
 
       /* Barra superior */
@@ -91,6 +90,11 @@
       --df-messenger-chip-border-color:#1d4ed8;
 
       text-align:left;
+    }
+
+    /* Regla para traspasar el Shadow DOM y cambiar el texto del mensaje enviado por el usuario */
+    df-messenger::part(user-message) {
+      color: #ffffff !important;
     }
 
   </style>
