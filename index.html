@@ -4,55 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EventBot UAE</title>
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #4a6fa5, #6b8cbf);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      padding: 20px;
-      box-sizing: border-box;
+    body{
+      margin:0;
+      font-family:'Segoe UI',Arial,sans-serif;
+
+      /* Nuevo degradado */
+      background:linear-gradient(135deg,#1d4ed8,#3b82f6);
+
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      padding:20px;
+      box-sizing:border-box;
+
+      /* Animación */
+      animation:aparecer .8s ease;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      text-align: center;
+
+    @keyframes aparecer{
+      from{
+        opacity:0;
+        transform:translateY(25px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
     }
-    p {
-      max-width: 500px;
-      opacity: 0.9;
-      text-align: center;
+
+    h1{
+      font-size:2.3rem;
+      margin-bottom:12px;
+      text-align:center;
+
+      text-shadow:0 4px 12px rgba(0,0,0,.35);
     }
-    df-messenger {
-      --df-messenger-bot-message: #eef2f9;
-      --df-messenger-user-message: #2563eb;
-      --df-messenger-font-color: #1f2937;
-      --df-messenger-button-titlebar-color: #2563eb;
-      --df-messenger-chat-background-color: #f7f9fc;
-      --df-messenger-send-icon: #2563eb;
-      --df-messenger-input-box-color: #ffffff;
-      --df-messenger-input-font-color: #1f2937;
-      --df-messenger-input-placeholder-font-color: #9aa5b1;
-      --df-messenger-minimized-chat-close-icon-color: #2563eb;
-      text-align: left;
+
+    p{
+      max-width:650px;
+      text-align:center;
+      opacity:.95;
+      font-size:1.05rem;
+      line-height:1.6;
+      margin-bottom:25px;
     }
+
+    df-messenger{
+
+      /* Mensajes del BOT */
+      --df-messenger-bot-message:#f5f7fb;
+
+      /* Mensajes del usuario */
+      --df-messenger-user-message:#2563eb;
+
+      /* Color de letra */
+      --df-messenger-font-color:#1f2937;
+
+      /* Barra superior */
+      --df-messenger-button-titlebar-color:#2563eb;
+
+      /* Fondo del chat */
+      --df-messenger-chat-background-color:#eef4ff;
+
+      /* Caja donde escribes */
+      --df-messenger-input-box-color:#ffffff;
+
+      --df-messenger-input-font-color:#111827;
+
+      --df-messenger-input-placeholder-font-color:#6b7280;
+
+      /* Botón enviar */
+      --df-messenger-send-icon:#2563eb;
+
+      /* Botón minimizar */
+      --df-messenger-minimized-chat-close-icon-color:#2563eb;
+
+      text-align:left;
+    }
+
   </style>
+
 </head>
+
 <body>
-  <h1>ChatBot de Eventos Académicos</h1>
-  <p>Haz clic en el ícono de chat en la esquina inferior derecha para hablar con el asistente virtual.</p>
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  <df-messenger
-    intent="WELCOME"
-    chat-title="EventBotㅤUAE"
-    chat-icon="xrobt.png"
-    agent-id="e994580c-e3b3-471e-a686-e7fb1ab14d6c"
-    language-code="es"
-  ></df-messenger>
+
+<h1>🤖 EventBot UAE</h1>
+
+<p>
+Bienvenido a <strong>EventBot UAE</strong>, el chatbot de eventos de la
+Universidad Agraria del Ecuador.
+
+Consulta información sobre eventos académicos, fechas, lugares,
+inscripciones, certificados y datos de contacto de forma rápida y sencilla.
+
+Haz clic en el botón de chat ubicado en la esquina inferior derecha para comenzar.
+</p>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<df-messenger
+intent="WELCOME"
+chat-title="EventBot UAE"
+chat-icon="xrobt.png"
+agent-id="e994580c-e3b3-471e-a686-e7fb1ab14d6c"
+language-code="es">
+</df-messenger>
+
 </body>
 </html>
