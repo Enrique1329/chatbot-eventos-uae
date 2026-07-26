@@ -9,10 +9,7 @@
     body{
       margin:0;
       font-family:'Segoe UI',Arial,sans-serif;
-
-      /* Nuevo degradado */
       background:linear-gradient(135deg,#1d4ed8,#3b82f6);
-
       min-height:100vh;
       display:flex;
       flex-direction:column;
@@ -21,27 +18,18 @@
       color:white;
       padding:20px;
       box-sizing:border-box;
-
-      /* Animación */
       animation:aparecer .8s ease;
     }
 
     @keyframes aparecer{
-      from{
-        opacity:0;
-        transform:translateY(25px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
+      from{ opacity:0; transform:translateY(25px); }
+      to{ opacity:1; transform:translateY(0); }
     }
 
     h1{
       font-size:2.3rem;
       margin-bottom:12px;
       text-align:center;
-
       text-shadow:0 4px 12px rgba(0,0,0,.35);
     }
 
@@ -55,50 +43,27 @@
     }
 
     df-messenger{
-
-      /* Mensajes del BOT */
       --df-messenger-bot-message:#f5f7fb;
 
-      /* Mensajes del usuario */
-      --df-messenger-user-message:#2563eb;
+      /* CAMBIO AQUÍ: Azul clarito para que resalte el texto oscuro */
+      --df-messenger-user-message:#dbeafe; 
 
-      /* Color de letra general */
       --df-messenger-font-color:#1f2937;
-
-      /* Barra superior */
       --df-messenger-button-titlebar-color:#2563eb;
-
-      /* Fondo del chat */
       --df-messenger-chat-background-color:#eef4ff;
-
-      /* Caja donde escribes */
       --df-messenger-input-box-color:#ffffff;
-
       --df-messenger-input-font-color:#111827;
-
       --df-messenger-input-placeholder-font-color:#6b7280;
-
-      /* Botón enviar */
       --df-messenger-send-icon:#2563eb;
-
-      /* Botón minimizar */
       --df-messenger-minimized-chat-close-icon-color:#2563eb;
 
-      /* Chips / Botones sugeridos */
       --df-messenger-chip-font-color:#ffffff;
       --df-messenger-chip-background-color:#2563eb;
       --df-messenger-chip-border-color:#1d4ed8;
 
       text-align:left;
     }
-
-    /* Regla para traspasar el Shadow DOM y cambiar el texto del mensaje enviado por el usuario */
-    df-messenger::part(user-message) {
-      color: #ffffff !important;
-    }
-
   </style>
-
 </head>
 
 <body>
@@ -118,11 +83,11 @@ Haz clic en el botón de chat ubicado en la esquina inferior derecha para comenz
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
 <df-messenger
-intent="WELCOME"
-chat-title="EventBot UAE"
-chat-icon="xrobt.png"
-agent-id="e994580c-e3b3-471e-a686-e7fb1ab14d6c"
-language-code="es">
+  intent="WELCOME"
+  chat-title="EventBot UAE"
+  chat-icon="xrobt.png"
+  agent-id="e994580c-e3b3-471e-a686-e7fb1ab14d6c"
+  language-code="es">
 </df-messenger>
 
 </body>
