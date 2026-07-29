@@ -6,24 +6,44 @@
   <title>EventBot UAE</title>
 
   <style>
+    :root{
+      --verde-oscuro:#0B3D2E;
+      --verde-principal:#176B45;
+      --verde-claro:#38A169;
+      --verde-suave:#D9F0E3;
+      --dorado:#D4A72C;
+      --blanco:#FFFFFF;
+      --gris-claro:#F3F4F6;
+      --texto-oscuro:#1F2937;
+    }
+
     body{
       margin:0;
       font-family:'Segoe UI',Arial,sans-serif;
-      background:linear-gradient(135deg,#1d4ed8,#3b82f6);
+      background:
+        radial-gradient(circle at top right, rgba(212,167,44,.22), transparent 28%),
+        linear-gradient(135deg,var(--verde-oscuro),var(--verde-principal));
       min-height:100vh;
       display:flex;
       flex-direction:column;
       align-items:center;
       justify-content:center;
-      color:white;
+      color:var(--blanco);
       padding:20px;
       box-sizing:border-box;
       animation:aparecer .8s ease;
     }
 
     @keyframes aparecer{
-      from{ opacity:0; transform:translateY(25px); }
-      to{ opacity:1; transform:translateY(0); }
+      from{
+        opacity:0;
+        transform:translateY(25px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
     }
 
     h1{
@@ -33,33 +53,46 @@
       text-shadow:0 4px 12px rgba(0,0,0,.35);
     }
 
+    h1::after{
+      content:"";
+      display:block;
+      width:80px;
+      height:4px;
+      margin:14px auto 0;
+      border-radius:999px;
+      background:var(--dorado);
+    }
+
     p{
       max-width:650px;
       text-align:center;
-      opacity:.95;
+      color:var(--blanco);
+      opacity:.96;
       font-size:1.05rem;
       line-height:1.6;
       margin-bottom:25px;
     }
 
+    strong{
+      color:#F8E7A3;
+    }
+
     df-messenger{
-      --df-messenger-bot-message:#f5f7fb;
+      --df-messenger-bot-message:#F4F8F5;
+      --df-messenger-user-message:var(--verde-suave);
 
-      /* CAMBIO AQUÍ: Azul clarito para que resalte el texto oscuro */
-      --df-messenger-user-message:#dbeafe; 
-
-      --df-messenger-font-color:#1f2937;
-      --df-messenger-button-titlebar-color:#2563eb;
-      --df-messenger-chat-background-color:#eef4ff;
-      --df-messenger-input-box-color:#ffffff;
+      --df-messenger-font-color:var(--texto-oscuro);
+      --df-messenger-button-titlebar-color:var(--verde-principal);
+      --df-messenger-chat-background-color:#EEF5F0;
+      --df-messenger-input-box-color:var(--blanco);
       --df-messenger-input-font-color:#111827;
-      --df-messenger-input-placeholder-font-color:#6b7280;
-      --df-messenger-send-icon:#2563eb;
-      --df-messenger-minimized-chat-close-icon-color:#2563eb;
+      --df-messenger-input-placeholder-font-color:#6B7280;
+      --df-messenger-send-icon:var(--verde-principal);
+      --df-messenger-minimized-chat-close-icon-color:var(--verde-principal);
 
-      --df-messenger-chip-font-color:#ffffff;
-      --df-messenger-chip-background-color:#2563eb;
-      --df-messenger-chip-border-color:#1d4ed8;
+      --df-messenger-chip-font-color:var(--blanco);
+      --df-messenger-chip-background-color:var(--verde-principal);
+      --df-messenger-chip-border-color:var(--verde-oscuro);
 
       text-align:left;
     }
@@ -68,27 +101,27 @@
 
 <body>
 
-<h1>🤖 EventBot UAE</h1>
+  <h1>🤖 EventBot UAE</h1>
 
-<p>
-  Bienvenido a <strong>EventBot UAE</strong>, el chatbot de eventos académicos de la
-  Universidad Agraria del Ecuador.
+  <p>
+    Bienvenido a <strong>EventBot UAE</strong>, el chatbot de eventos académicos de la
+    Universidad Agraria del Ecuador.
 
-  Consulta información sobre eventos disponibles, fechas, lugares,
-  inscripciones, costos, ponentes, certificados, público y canales de contacto.
+    Consulta información sobre eventos disponibles, fechas, lugares,
+    inscripciones, costos, ponentes, certificados, público y canales de contacto.
 
-  Haz clic en el botón de chat ubicado en la esquina inferior derecha para comenzar.
-</p>
+    Haz clic en el botón de chat ubicado en la esquina inferior derecha para comenzar.
+  </p>
 
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
-<df-messenger
-  intent="WELCOME"
-  chat-title="EventBot UAE"
-  chat-icon="xrobt.png"
-  agent-id="e994580c-e3b3-471e-a686-e7fb1ab14d6c"
-  language-code="es">
-</df-messenger>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="EventBot UAE"
+    chat-icon="xrobt.png"
+    agent-id="e994580c-e3b3-471e-a686-e7fb1ab14d6c"
+    language-code="es">
+  </df-messenger>
 
 </body>
 </html>
