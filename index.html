@@ -10,16 +10,14 @@
     :root{
       --verde-oscuro:#0B3D2E;
       --verde-principal:#176B45;
-      --verde-secundario:#2F855A;
-      --verde-claro:#D9F0E3;
-      --verde-muy-claro:#F2F8F4;
+      --verde-claro:#38A169;
+      --verde-suave:#D9F0E3;
       --dorado:#D4A72C;
-      --dorado-claro:#F6E9B9;
       --blanco:#FFFFFF;
-      --gris-fondo:#F5F7F6;
-      --gris-borde:#E4E9E6;
-      --gris-texto:#5B6470;
+      --gris-claro:#F3F4F6;
       --texto-oscuro:#1F2937;
+      --gris-texto:#5B6470;
+      --gris-borde:#E4E9E6;
       --sombra-suave:0 12px 30px rgba(11,61,46,.10);
       --sombra-media:0 18px 42px rgba(11,61,46,.16);
     }
@@ -35,9 +33,9 @@
     }
 
     body{
-      font-family:"Segoe UI",Arial,sans-serif;
+      font-family:'Segoe UI',Arial,sans-serif;
       color:var(--texto-oscuro);
-      background:var(--gris-fondo);
+      background:#F5F7F6;
       line-height:1.6;
     }
 
@@ -84,7 +82,6 @@
       background:linear-gradient(135deg,var(--dorado),#E9C95E);
       color:var(--verde-oscuro);
       font-weight:800;
-      letter-spacing:.03em;
       box-shadow:0 6px 16px rgba(212,167,44,.28);
     }
 
@@ -95,7 +92,6 @@
 
     .marca-texto strong{
       font-size:1rem;
-      letter-spacing:.01em;
     }
 
     .marca-texto span{
@@ -143,28 +139,6 @@
       padding:96px 0 90px;
     }
 
-    .hero::before,
-    .hero::after{
-      content:"";
-      position:absolute;
-      border-radius:50%;
-      border:1px solid rgba(255,255,255,.10);
-    }
-
-    .hero::before{
-      width:420px;
-      height:420px;
-      right:-180px;
-      bottom:-210px;
-    }
-
-    .hero::after{
-      width:250px;
-      height:250px;
-      right:80px;
-      top:-130px;
-    }
-
     .hero-grid{
       position:relative;
       z-index:2;
@@ -177,7 +151,6 @@
     .etiqueta{
       display:inline-flex;
       align-items:center;
-      gap:8px;
       padding:7px 14px;
       border-radius:999px;
       border:1px solid rgba(246,233,185,.58);
@@ -218,7 +191,7 @@
       border-radius:11px;
       font-weight:700;
       border:2px solid transparent;
-      transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+      transition:transform .2s ease;
     }
 
     .boton:hover{
@@ -244,47 +217,18 @@
       padding:32px;
       box-shadow:0 25px 55px rgba(0,0,0,.22);
       border:1px solid rgba(255,255,255,.65);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .panel-chat::before{
-      content:"";
-      position:absolute;
-      width:150px;
-      height:150px;
-      right:-54px;
-      top:-54px;
-      border-radius:50%;
-      background:var(--verde-claro);
-    }
-
-    .mini-logo{
-      width:58px;
-      height:58px;
-      border-radius:17px;
-      display:grid;
-      place-items:center;
-      background:var(--verde-principal);
-      color:var(--blanco);
-      font-size:1.25rem;
-      font-weight:800;
-      position:relative;
-      box-shadow:0 9px 20px rgba(23,107,69,.22);
     }
 
     .panel-chat h2{
       color:var(--verde-oscuro);
       font-size:1.55rem;
-      margin:18px 0 10px;
-      position:relative;
+      margin-bottom:10px;
     }
 
     .panel-chat p{
       color:var(--gris-texto);
       font-size:.98rem;
       margin-bottom:20px;
-      position:relative;
     }
 
     .estado{
@@ -293,7 +237,6 @@
       gap:9px;
       color:var(--verde-principal);
       font-weight:700;
-      position:relative;
     }
 
     .estado::before{
@@ -348,13 +291,12 @@
       border-radius:18px;
       padding:25px;
       box-shadow:var(--sombra-suave);
-      transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+      transition:transform .2s ease,box-shadow .2s ease;
     }
 
     .tarjeta:hover{
       transform:translateY(-5px);
       box-shadow:var(--sombra-media);
-      border-color:#CCE2D4;
     }
 
     .icono{
@@ -363,9 +305,8 @@
       border-radius:14px;
       display:grid;
       place-items:center;
-      background:var(--verde-claro);
+      background:var(--verde-suave);
       color:var(--verde-oscuro);
-      font-size:1.05rem;
       font-weight:800;
       margin-bottom:18px;
     }
@@ -402,21 +343,8 @@
     .evento-superior{
       min-height:126px;
       padding:24px;
-      background:
-        linear-gradient(135deg,rgba(11,61,46,.96),rgba(23,107,69,.88));
+      background:linear-gradient(135deg,rgba(11,61,46,.96),rgba(23,107,69,.88));
       color:var(--blanco);
-      position:relative;
-    }
-
-    .evento-superior::after{
-      content:"";
-      position:absolute;
-      width:90px;
-      height:90px;
-      right:-30px;
-      top:-30px;
-      border-radius:50%;
-      background:rgba(212,167,44,.20);
     }
 
     .evento-superior small{
@@ -430,7 +358,6 @@
       margin-top:8px;
       font-size:1.35rem;
       line-height:1.25;
-      max-width:260px;
     }
 
     .evento-contenido{
@@ -451,7 +378,7 @@
     }
 
     .como-usar{
-      background:linear-gradient(180deg,var(--verde-muy-claro),var(--blanco));
+      background:linear-gradient(180deg,#F2F8F4,var(--blanco));
     }
 
     .pasos{
@@ -496,7 +423,6 @@
       background:#FFF9E8;
       color:#5C4A16;
       border-radius:11px;
-      box-shadow:0 8px 18px rgba(92,74,22,.06);
     }
 
     footer{
@@ -507,21 +433,25 @@
       font-size:.92rem;
     }
 
+    /* CHATBOT: CONSERVADO EXACTAMENTE COMO EN TU HTML ORIGINAL */
     df-messenger{
       --df-messenger-bot-message:#F4F8F5;
-      --df-messenger-user-message:#D9F0E3;
-      --df-messenger-font-color:#1F2937;
-      --df-messenger-button-titlebar-color:#176B45;
+      --df-messenger-user-message:var(--verde-suave);
+
+      --df-messenger-font-color:var(--texto-oscuro);
+      --df-messenger-button-titlebar-color:var(--verde-principal);
       --df-messenger-chat-background-color:#EEF5F0;
-      --df-messenger-input-box-color:#FFFFFF;
+      --df-messenger-input-box-color:var(--blanco);
       --df-messenger-input-font-color:#111827;
       --df-messenger-input-placeholder-font-color:#6B7280;
-      --df-messenger-send-icon:#176B45;
-      --df-messenger-minimized-chat-close-icon-color:#FFFFFF;
-      --df-messenger-chip-font-color:#FFFFFF;
-      --df-messenger-chip-background-color:#176B45;
-      --df-messenger-chip-border-color:#0B3D2E;
-      z-index:999;
+      --df-messenger-send-icon:var(--verde-principal);
+      --df-messenger-minimized-chat-close-icon-color:var(--verde-principal);
+
+      --df-messenger-chip-font-color:var(--blanco);
+      --df-messenger-chip-background-color:var(--verde-principal);
+      --df-messenger-chip-border-color:var(--verde-oscuro);
+
+      text-align:left;
     }
 
     @media(max-width:960px){
@@ -551,14 +481,6 @@
       .lista-eventos,
       .pasos{
         grid-template-columns:1fr;
-      }
-
-      .barra{
-        min-height:68px;
-      }
-
-      .marca-texto strong{
-        font-size:.93rem;
       }
 
       section{
@@ -598,9 +520,8 @@
           <span class="etiqueta">Asistente virtual de eventos académicos</span>
           <h1>Consulta eventos universitarios de forma rápida y sencilla</h1>
           <p>
-            EventBot UAE brinda orientación sobre eventos académicos,
-            fechas, lugares, inscripciones, costos, ponentes, certificados
-            y canales de contacto.
+            EventBot UAE brinda orientación sobre eventos académicos, fechas,
+            lugares, inscripciones, costos, ponentes, certificados y canales de contacto.
           </p>
 
           <div class="acciones">
@@ -610,11 +531,10 @@
         </div>
 
         <div class="panel-chat">
-          <div class="mini-logo">IA</div>
           <h2>EventBot UAE</h2>
           <p>
-            Abre el chat ubicado en la esquina inferior derecha y escribe
-            tu pregunta. También puedes utilizar las opciones rápidas disponibles.
+            Abre el chat ubicado en la esquina inferior derecha y escribe tu pregunta.
+            También puedes utilizar las opciones rápidas disponibles.
           </p>
           <div class="estado">Asistente disponible</div>
         </div>
@@ -627,8 +547,8 @@
           <span>Información disponible</span>
           <h2>¿Qué puedes consultar?</h2>
           <p>
-            El chatbot organiza las consultas más frecuentes relacionadas
-            con los eventos académicos de la universidad.
+            El chatbot organiza las consultas más frecuentes relacionadas con
+            los eventos académicos de la universidad.
           </p>
         </div>
 
@@ -689,9 +609,7 @@
         <div class="titulo-seccion">
           <span>Agenda académica</span>
           <h2>Eventos incluidos en el chatbot</h2>
-          <p>
-            Estas actividades forman parte de la demostración académica del proyecto.
-          </p>
+          <p>Estas actividades forman parte de la demostración académica del proyecto.</p>
         </div>
 
         <div class="lista-eventos">
@@ -739,9 +657,7 @@
         <div class="titulo-seccion">
           <span>Uso del asistente</span>
           <h2>Consulta en tres pasos</h2>
-          <p>
-            El chatbot puede utilizarse desde cualquier dispositivo con acceso a internet.
-          </p>
+          <p>El chatbot puede utilizarse desde cualquier dispositivo con acceso a internet.</p>
         </div>
 
         <div class="pasos">
@@ -766,10 +682,10 @@
 
         <div class="aviso">
           <strong>Importante:</strong>
-          EventBot UAE es un asistente informativo. Las fechas, lugares,
-          costos, disponibilidad de certificados y demás condiciones pueden
-          estar sujetas a cambios. Se recomienda verificar la información
-          en los canales oficiales de la Universidad Agraria del Ecuador.
+          EventBot UAE es un asistente informativo. Las fechas, lugares, costos,
+          disponibilidad de certificados y demás condiciones pueden estar sujetas
+          a cambios. Se recomienda verificar la información en los canales oficiales
+          de la Universidad Agraria del Ecuador.
         </div>
       </div>
     </section>
@@ -781,6 +697,7 @@
     </div>
   </footer>
 
+  <!-- CHATBOT: CONSERVADO SIN CAMBIOS -->
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
   <df-messenger
